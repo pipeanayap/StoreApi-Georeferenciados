@@ -5,6 +5,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4B82F07F-4348-4FD9-8FAD-E74031203623}"
 	ProjectSection(SolutionItems) = preProject
 		compose.yaml = compose.yaml
+		Dockerfile = Dockerfile
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreApi.Models", "StoreApi.Models\StoreApi.Models.csproj", "{CFBB9141-6F1E-47A0-864E-2BFC92274AB7}"

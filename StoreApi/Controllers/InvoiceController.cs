@@ -36,14 +36,14 @@ namespace StoreApi.Controllers
         }
         
         //GET /api/invoices/{id} → obtiene una factura por Id.
-        [HttpGet("{id}")]
-        public async Task<ActionResult> GetById(int id)
-        {
-            var invoice = await _context.Invoice
-                .FirstOrDefaultAsync(i => i.Id == id);
-            return Ok(invoice);
-        }
-        
+            [HttpGet("{id}")]
+            public async Task<ActionResult> GetById(int id)
+            {
+                var invoice = await _context.Invoice
+                    .FirstOrDefaultAsync(i => i.Id == id);
+                return Ok(invoice);
+            }
+            
         // POST /api/invoices → crea una nueva factura (valida datos, calcula Total si no viene).
         [HttpPost]
         public async Task<ActionResult> CreateInvoice([FromBody] Invoice invoice)

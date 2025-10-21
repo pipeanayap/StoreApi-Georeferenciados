@@ -19,16 +19,21 @@ builder.Services.AddDbContext<StoreDbContext>(o =>
 
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers()
+
     .AddJsonOptions(o =>
     {
         o.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
         o.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
     });
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy => policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+});
 
 
 
 var app = builder.Build();
-
+app.UseCors("AllowAll");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

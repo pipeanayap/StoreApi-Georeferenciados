@@ -583,3 +583,4 @@ C:\Users\luisf\RiderProjects\StoreApi\StoreApi\bin\Debug\net9.0\Microsoft.AspNet
 C:\Users\luisf\RiderProjects\StoreApi\StoreApi\bin\Debug\net9.0\Wkhtmltopdf.NetCore.dll
 C:\Users\luisf\RiderProjects\StoreApi\StoreApi\obj\Debug\net9.0\StoreApi.RazorAssemblyInfo.cache
 C:\Users\luisf\RiderProjects\StoreApi\StoreApi\obj\Debug\net9.0\StoreApi.RazorAssemblyInfo.cs
+C:\Users\luisf\RiderProjects\StoreApi\StoreApi\obj\Debug\net9.0\StoreApi.sourcelink.json
