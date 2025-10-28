@@ -12,8 +12,8 @@ using StoreApi;
 namespace StoreApi.Migrations
 {
     [DbContext(typeof(StoreDbContext))]
-    [Migration("20250905202048_InsertsOnInvoice2")]
-    partial class InsertsOnInvoice2
+    [Migration("20251028210137_borrarCosillas2")]
+    partial class borrarCosillas2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,6 +44,9 @@ namespace StoreApi.Migrations
                     b.Property<string>("BillingName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Currency")
                         .IsRequired()
@@ -81,67 +84,14 @@ namespace StoreApi.Migrations
                     b.Property<double>("Total")
                         .HasColumnType("float");
 
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
                     b.HasKey("Id");
 
                     b.HasIndex("OrderId");
 
                     b.ToTable("Invoice");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            BillingAddress = "Calle Falsa 123",
-                            BillingEmail = "juan.perez@email.com",
-                            BillingName = "Juan Pérez",
-                            Currency = "MXN",
-                            DueDate = new DateTime(2024, 6, 30, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            InvoiceNumber = "INV-1001",
-                            IsPaid = true,
-                            IssueDate = new DateTime(2024, 6, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            OrderId = 1,
-                            PaymentDate = new DateTime(2024, 6, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Subtotal = 1000.0,
-                            Tax = 200.0,
-                            TaxId = "ABC123456789",
-                            Total = 1200.0
-                        },
-                        new
-                        {
-                            Id = 2,
-                            BillingAddress = "Av. Principal 456",
-                            BillingEmail = "maria.lopez@email.com",
-                            BillingName = "María López",
-                            Currency = "MXN",
-                            DueDate = new DateTime(2024, 7, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            InvoiceNumber = "INV-1002",
-                            IsPaid = false,
-                            IssueDate = new DateTime(2024, 6, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            OrderId = 2,
-                            PaymentDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Subtotal = 800.0,
-                            Tax = 150.0,
-                            TaxId = "DEF987654321",
-                            Total = 950.0
-                        },
-                        new
-                        {
-                            Id = 3,
-                            BillingAddress = "Blvd. Central 789",
-                            BillingEmail = "carlos.ruiz@email.com",
-                            BillingName = "Carlos Ruiz",
-                            Currency = "MXN",
-                            DueDate = new DateTime(2024, 7, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            InvoiceNumber = "INV-1003",
-                            IsPaid = true,
-                            IssueDate = new DateTime(2024, 6, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            OrderId = 3,
-                            PaymentDate = new DateTime(2024, 6, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Subtotal = 200.0,
-                            Tax = 20.0,
-                            TaxId = "GHI456123789",
-                            Total = 220.0
-                        });
                 });
 
             modelBuilder.Entity("StoreApi.Models.Entities.Order", b =>

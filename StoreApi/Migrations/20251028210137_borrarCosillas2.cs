@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace StoreApi.Migrations
 {
     /// <inheritdoc />
-    public partial class AddCreatedAtAndUpdatedAt : Migration
+    public partial class borrarCosillas2 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -24,27 +24,6 @@ namespace StoreApi.Migrations
                 type: "datetime2",
                 nullable: false,
                 defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
-
-            migrationBuilder.UpdateData(
-                table: "Invoice",
-                keyColumn: "Id",
-                keyValue: 1,
-                columns: new[] { "CreatedAt", "UpdatedAt" },
-                values: new object[] { new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
-
-            migrationBuilder.UpdateData(
-                table: "Invoice",
-                keyColumn: "Id",
-                keyValue: 2,
-                columns: new[] { "CreatedAt", "UpdatedAt" },
-                values: new object[] { new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
-
-            migrationBuilder.UpdateData(
-                table: "Invoice",
-                keyColumn: "Id",
-                keyValue: 3,
-                columns: new[] { "CreatedAt", "UpdatedAt" },
-                values: new object[] { new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
         }
 
         /// <inheritdoc />
