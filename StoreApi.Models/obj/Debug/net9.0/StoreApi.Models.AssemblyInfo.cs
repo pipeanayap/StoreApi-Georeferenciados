@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StoreApi.Models")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01df323bdd11260b9f3d62ff4e1361accda5f92e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0fb0877d405664509674cca8f032bc24b49665a9")]
 [assembly: System.Reflection.AssemblyProductAttribute("StoreApi.Models")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StoreApi.Models")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
