@@ -10,3 +10,4 @@ C:\Users\luisf\RiderProjects\StoreApi\StoreApi.Models\obj\Debug\net9.0\refint\St
 C:\Users\luisf\RiderProjects\StoreApi\StoreApi.Models\obj\Debug\net9.0\StoreApi.Models.pdb
 C:\Users\luisf\RiderProjects\StoreApi\StoreApi.Models\obj\Debug\net9.0\ref\StoreApi.Models.dll
 C:\Users\luisf\RiderProjects\StoreApi\StoreApi.Models\obj\Debug\net9.0\StoreApi.Models.sourcelink.json
+C:\Users\luisf\RiderProjects\StoreApi\StoreApi.Models\obj\Debug\net9.0\StoreApi.Models.csproj.AssemblyReference.cache

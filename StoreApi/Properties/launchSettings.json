@@ -16,7 +16,8 @@
       "launchBrowser": false,
       "applicationUrl": "https://localhost:7184;http://localhost:5215",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ConnectionStrings__SqlServer":"Server=3.14.147.57;Database=StoreDB;User Id=sa;Password=Juande..10;Encrypt=True;TrustServerCertificate=True;MultipleActiveResultSets=True"
       }
     }
   }
