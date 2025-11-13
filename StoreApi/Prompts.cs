@@ -25,4 +25,33 @@ public class Prompts
                 No me saludes, no me des explicaciones, no me des comentarios y no incluyas texto adicional.
                     ";
     }
+
+    public static string GenerateInvoicesPrompt(string jsonData)
+    {
+        return @$"
+                Eres un analista experto de datos de facturas.
+                Analiza los siguientes datos de facturas y ordenes (en JSON)
+                {jsonData}
+
+                Debes responder **exclusivamente** en formato JSON y con esta estructura:
+                {{
+                  ""totalInvoices"": int,
+                  ""paidInvoices"": int,
+                  ""unpaidInvoices"": int,
+                  ""totalRevenue"": double,
+                  ""averageInvoiceAmount"": double,
+                  ""commonCurrencies"": [string],
+                  ""patterns"": [string]
+                }}
+
+                En el apartado de patterns, agrega analisis como: 
+                - Qué porcentaje de facturas están pagadas.
+                - Qué moneda se usa más.
+                - Cualquier patrón relevante detectado.
+
+                Si por alguna razon, no puedes generar esta respuesta valida (por ejemplo, te hace falta datos o tienes un error en el formato)            , 
+                responde **SOLO** con el texto : error.
+                No me saludes, no me des explicaciones, no me des comentarios y no incluyas texto adicional.
+                ";
+    }
 }
